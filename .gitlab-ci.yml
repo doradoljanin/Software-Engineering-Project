@@ -1,0 +1,50 @@
+image: node:latest
+
+stages:
+  - on-merge-request-build-backend
+  - deploy-on-prod
+  - compile_pdf
+
+on-merge-request-build-backend:
+  stage: on-merge-request-build-backend
+  image: gradle:6.3-jdk14
+  script:
+    - cd IzvorniKod
+    - cd backend
+    - cd humanitarni-setaci-pasa
+    - export GRADLE_USER_HOME=`pwd`/.gradle
+    - gradle clean build --stacktrace
+  only:
+    - prod
+
+deploy-on-prod:
+  stage: deploy-on-prod
+  image: ruby:latest
+  script:
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
+    - cd IzvorniKod
+    - cd backend
+    - cd humanitarni-setaci-pasa
+    - dpl --provider=heroku --app=$HEROKU_APP_DEV --api-key=$HEROKU_API_KEY
+    - cd ..
+    - cd ..
+    - cd frontend
+    - cd oneclick-frontend
+    - dpl --provider=heroku --app=$HEROKU_APP_DEV_FRONTEND --api-key=$HEROKU_API_KEY
+  only:
+    - prod
+
+compile_pdf:
+  stage: compile_pdf
+  image: aergus/latex
+  script:
+    - cd Dokumentacija
+    - latexmk -pdf PROGI_ProjektnaDokumentacija_v6.tex
+  artifacts:
+    paths:
+      - Dokumentacija/PROGI_ProjektnaDokumentacija_v6.pdf
+  only:
+    - devdoc
+

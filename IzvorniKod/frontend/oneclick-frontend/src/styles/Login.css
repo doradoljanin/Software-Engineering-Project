@@ -1,0 +1,66 @@
+.horizontal-center {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+    padding: 15px 0px 0px 0px;
+}
+
+.centered {
+    display: block;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+.textfield {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+.loginbox {
+    width: 380px;
+    height: 530px;
+    background: rgb(231, 231, 235);
+    color: white;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 20px 40px;
+    margin: 50px 0;
+}
+
+.login {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.logintext {
+    color: black;
+}
+
+.loginlogo {
+    color: black;
+    height: 65px;
+    width: 39px;
+    float: left;
+    margin: 13px 5px;
+    transform: rotate(-20deg);
+}
+
+.login {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@media only screen and (max-height: 650px) {
+    .loginbox {
+        margin: 120px 0;
+    }
+}

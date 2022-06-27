@@ -1,0 +1,47 @@
+.animal-selector-root {
+    margin-top: 5px;
+    border-radius: 4px;
+}
+
+.animal-selector-appointment-picker {
+    display: flex;
+    flex-flow: row wrap;
+    border-bottom: 3px solid rgb(80, 80, 214);
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.animal-selector-appointment-picker > form {
+    display: flex;
+    align-content: center;
+}
+
+.animal-selector-appointment-picker > form > * {
+    padding-left: 3px;
+    padding-right: 3px;
+    align-self: center;
+    display: inline-block;
+}
+
+.animal-selector-confirm-button {
+    justify-self: flex-end;
+    align-self: center;
+}
+
+.register-walk{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: start;
+    align-items: center;
+}
+
+.register-walk{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: start;
+    align-items: center;
+}

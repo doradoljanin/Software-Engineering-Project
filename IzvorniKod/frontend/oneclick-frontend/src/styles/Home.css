@@ -1,0 +1,64 @@
+.homediv {
+   background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+   margin-right: 90px;
+   margin-left: 90px;
+   padding-bottom: 25px;
+}
+
+.hometitle {
+   display: inline;
+   height: 70px;
+   width: 100%;
+   font-family: 'Century Gothic';
+   font-size: 2em;
+   background-color: white;
+   padding-top: 5px;
+   padding-bottom: 30px;
+   text-align: center;
+}
+
+.homelogo {
+   color: black;
+   height: 70px;
+   width: 75px;
+   margin: 0;
+   transform: rotate(-20deg);
+   display: none;
+}
+
+@media only screen and (max-width: 1450px) {
+   .homediv {
+      margin-right: 80px;
+      margin-left: 75px;
+      padding-left: 55px;
+
+   }
+}
+
+@media only screen and (max-width: 1160px) {
+   .homediv {
+      margin-right: 120px;
+      margin-left: 80px;
+      padding-right: 50px;
+      padding-left: 55px;
+
+   }
+}
+
+@media only screen and (max-width: 919px) {
+   .homediv {
+      margin-right: 120px;
+      margin-left: 80px;
+      padding-right: 50px;
+      padding-left: 55px;
+      background-color: white;
+   }
+}
+
+@media only screen and (max-width: 750px) {
+   .homediv {
+      margin-right: 120px;
+      margin-left: 40px;
+      background-color: white;
+   }
+}

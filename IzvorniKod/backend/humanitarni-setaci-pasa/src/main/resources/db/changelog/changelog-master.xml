@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <include file="changes/1-add-users.xml" relativeToChangelogFile="true"/>
+    <include file="changes/2-add-places.xml" relativeToChangelogFile="true"/>
+    <include file="changes/3-add-associations.xml" relativeToChangelogFile="true"/>
+    <include file="changes/4-alter-id-columns-to-autoincrement.xml" relativeToChangelogFile="true"/>
+    <include file="changes/5-alter-users-column-phone-number-name.xml" relativeToChangelogFile="true"/>
+    <include file="changes/6-alter-associations-add-user-id.xml" relativeToChangelogFile="true"/>
+    <include file="changes/7-alter-user-change-password-length-to-200.xml" relativeToChangelogFile="true"/>
+    <include file="changes/8-add-citizens.xml" relativeToChangelogFile="true"/>
+    <include file="changes/9-add-unique-constraint-to-email-and-username.xml" relativeToChangelogFile="true"/>
+    <include file="changes/10-add-breeds.xml" relativeToChangelogFile="true"/>
+    <include file="changes/11-alter-association-address.xml" relativeToChangelogFile="true"/>
+    <include file="changes/12-add-animals.xml" relativeToChangelogFile="true"/>
+    <include file="changes/13-alter-animals-column-picture-data-type.xml" relativeToChangelogFile="true"/>
+    <include file="changes/14-alter-animals-column-picture-data-type.xml" relativeToChangelogFile="true"/>
+    <include file="changes/15-add-unique-constraint-to-citizen-user-id.xml" relativeToChangelogFile="true"/>
+    <include file="changes/16-add-walk.xml" relativeToChangelogFile="true"/>
+    <include file="changes/17-add-walk-animal.xml" relativeToChangelogFile="true"/>
+    <include file="changes/18-change-duration-to-integer.xml" relativeToChangelogFile="true"/>
+    <include file="changes/19-add-user-is-public.xml" relativeToChangelogFile="true"/>
+    <include file="changes/20-alter-animal-id-autoincrement.xml" relativeToChangelogFile="true"/>
+</databaseChangeLog>

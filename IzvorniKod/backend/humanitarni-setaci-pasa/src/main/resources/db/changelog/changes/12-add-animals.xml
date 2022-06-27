@@ -1,0 +1,38 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="12" author="izekic">
+        <createTable tableName="Animals">
+            <column name="id" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="picture" type="blob"/>
+            <column name="description" type="varchar(200)"/>
+            <column name="name" type="varchar(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="breed_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="birthyear" type="int"/>
+            <column name="preferred_walk_type" type="varchar(50)"/>
+            <column name="gender" type="varchar(10)"/>
+            <column name="association_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="breed_id"
+                                 baseTableName="Animals"
+                                 constraintName="fk_animal_breed"
+                                 referencedTableName="Breeds"
+                                 referencedColumnNames="id" />
+        <addForeignKeyConstraint baseColumnNames="association_id"
+                                 baseTableName="Animals"
+                                 constraintName="fk_animal_association"
+                                 referencedTableName="Associations"
+                                 referencedColumnNames="id" />
+    </changeSet>
+</databaseChangeLog>

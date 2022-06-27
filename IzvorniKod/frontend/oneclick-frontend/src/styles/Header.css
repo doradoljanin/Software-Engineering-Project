@@ -1,0 +1,152 @@
+/*
+
+.Header {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background-color: rgb(177, 224, 155);
+  color: #333;
+}
+
+.Header .btn {
+  margin: 15px;
+  padding-right: auto;
+}
+
+*/
+.headerlogo {
+  color: white;
+  height: 55px;
+  width: 45px;
+  float: left;
+  margin: 5px 15px;
+  transform: rotate(-20deg);
+}
+
+.burgerbar {
+  color: white;
+}
+
+.title {
+  float: left;
+  color: white;
+}
+
+.homeicon {
+  padding: 10px;
+}
+
+.nav {
+  border-bottom: 1px solid #EAEAEB;
+  text-align: right;
+  height: 100px;
+  line-height: 70px;
+  background-color: rgb(80, 80, 214);
+}
+
+
+.menu {
+  margin: 0 80px 0 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+}
+
+
+.menu Button {
+  clear: right;
+  color: white;
+  margin: 0 10px;
+  line-height: 70px;
+  z-index: 9;
+}
+
+
+label {
+  margin: 0 40px 0 0;
+  font-size: 26px;
+  line-height: 70px;
+  display: none;
+  /*
+  width: 26px;
+  float: right;
+  */
+}
+
+
+#toggle {
+  display: none;
+}
+
+/* 
+
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+*/
+
+
+@media only screen and (max-width: 1000px) {
+  label {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu {
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+
+  .menu Button {
+    display: block;
+    border-bottom: 1px solid #EAEAEB;
+    width: 100%;
+    margin: 0;
+    background-color: rgb(130, 131, 138);
+
+  }
+
+  .menu Button :hover {
+    display: block;
+    color: black;
+    border-style: 2px solid blue;
+    width: 100%;
+    margin: 0;
+    background-color: #cbcbd0;
+  }
+
+  .menu Button :active {
+    display: block;
+    color: blue;
+    border-bottom: 1px solid #EAEAEB;
+    width: 100%;
+    margin: 0;
+    background-color: #9696e2;
+  }
+
+  #toggle:checked+.menu {
+    display: block;
+  }
+
+  .title {
+    display: none;
+  }
+}
+
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+*/
+@media (min-width: 746px) and (max-width: 1360px) {
+  .title {
+    display: none;
+  }
+}

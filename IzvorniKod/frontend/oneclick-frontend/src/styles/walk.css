@@ -1,0 +1,22 @@
+.walk-header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-bottom: 1%;
+    padding: 5px 15px;
+}
+
+.walk {
+    background-color: #E9ECEF;
+    margin-right: 90px;
+    margin-left: 90px;
+}
+
+.confirmed {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 0%;
+    align-content: space-between;
+    font-size: 1rem;
+}
